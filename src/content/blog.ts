@@ -1,24 +1,18 @@
-export type Post = {
-  slug: string;
-  title: string;
-  excerpt: string;
-  publicationDate: string;
-  content: string;
-};
-
-export const posts: Post[] = [
+export const posts = [
   {
-    slug: 'mastering-react-hooks',
-    title: 'Mastering React Hooks: A Deep Dive',
-    excerpt: 'Explore the power of React Hooks and how they can simplify your component logic and state management.',
-    publicationDate: '2024-10-22',
-    content: 'This is the full content for the React Hooks deep dive. It would contain detailed explanations and code examples...'
+    slug: 'introducing-my-portfolio',
+    title: 'Introducing My Portfolio: Software + Fabrication',
+    excerpt: 'How I blend full‑stack engineering with CNC fabrication and AI‑assisted workflows.',
+    publicationDate: '2025-01-05',
+    content:
+      'Welcome! In this post I share the principles behind my portfolio: pragmatic engineering, careful visual systems, and precision manufacturing. Expect write‑ups on Next.js 15, Three.js, Paystack, Firebase, and digital fabrication tips.'
   },
   {
-    slug: 'getting-started-with-cnc',
-    title: 'Getting Started with CNC Machining',
-    excerpt: 'A beginner\'s guide to the world of CNC, from choosing your first machine to running your first job.',
-    publicationDate: '2024-10-15',
-    content: 'This is the full content for the CNC machining guide. It would cover safety, software, and basic operations...'
-  },
+    slug: 'optimizing-3d-performance',
+    title: 'Optimizing 3D Performance for the Web',
+    excerpt: 'Practical techniques for smooth Three.js experiences on mobile and desktop.',
+    publicationDate: '2024-08-12',
+    content:
+      'We walk through level‑of‑detail strategies, texture optimization, and interaction design that keep 3D projects feeling fast while preserving visual integrity.'
+  }
 ];

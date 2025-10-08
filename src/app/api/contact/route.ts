@@ -1,7 +1,6 @@
 import { Resend } from 'resend';
 import { NextResponse } from 'next/server';
 
-const resend = new Resend(process.env.RESEND_API_KEY);
 const toEmail = process.env.CONTACT_EMAIL_TO;
 
 export async function POST(request: Request) {
@@ -21,11 +20,12 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Missing required fields.' }, { status: 400 });
     }
 
-    const { data, error } = await resend.emails.send({
+  const resend = new Resend(process.env.RESEND_API_KEY as string);
+  const { data, error } = await resend.emails.send({
       from: 'Portfolio Contact Form <onboarding@resend.dev>', // This must be a verified domain on Resend.
       to: toEmail,
-      subject: `New message from ${name}: ${subject}`,
-      reply_to: email,
+  subject: `New message from ${name}: ${subject}`,
+  replyTo: email,
       html: `<p>You have a new message from your portfolio contact form.</p>
              <p><strong>Name:</strong> ${name}</p>
              <p><strong>Email:</strong> ${email}</p>

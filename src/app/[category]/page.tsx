@@ -1,5 +1,6 @@
-import { projects } from '@/content/projects';
 import ProjectCard from '@/components/shared/ProjectCard';
+import { projects } from '@/content/projects';
+
 import { notFound } from 'next/navigation';
 
 type CategoryPageProps = {
@@ -20,7 +21,11 @@ const CategoryPage = ({ params }: CategoryPageProps) => {
     notFound();
   }
 
-  const filteredProjects = projects.filter(p => p.category === category);
+  const map: Record<string, string> = {
+    software: 'Development',
+    fabrication: 'Fabrication',
+  };
+  const filteredProjects = projects.filter(p => p.category === map[category]);
   const title = category.charAt(0).toUpperCase() + category.slice(1);
 
   return (
@@ -28,7 +33,7 @@ const CategoryPage = ({ params }: CategoryPageProps) => {
       <h1 className="text-4xl font-bold text-primary mb-12 text-center">{title} Projects</h1>
       <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {filteredProjects.map(project => (
-          <ProjectCard key={project.slug} project={project} />
+          <ProjectCard key={project.id} project={project} />
         ))}
       </div>
     </div>
