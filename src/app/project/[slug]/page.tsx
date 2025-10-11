@@ -1,9 +1,10 @@
 'use client';
 
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion } from 'framer-motion';
 import { useEffect, useState, use } from 'react';
 import { notFound } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { 
   ArrowLeft, 
   ExternalLink, 
@@ -182,9 +183,11 @@ interface ProjectDetailPageProps {
                       src={galleryItems[currentSlide].url}
                     />
                   ) : (
-                    <img
+                    <Image
                       src={galleryItems[currentSlide]?.url}
                       alt={galleryItems[currentSlide]?.caption}
+                      width={800}
+                      height={600}
                       className="w-full h-full object-contain"
                     />
                   )}
@@ -238,9 +241,11 @@ interface ProjectDetailPageProps {
           {!isGalleryProject && (
             <motion.div variants={itemVariants} className="glass-card p-8">
               <div className="aspect-video rounded-lg overflow-hidden">
-                <img
+                <Image
                   src={project.image}
                   alt={project.title}
+                  width={800}
+                  height={450}
                   className="w-full h-full object-contain"
                 />
               </div>

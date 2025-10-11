@@ -3,22 +3,26 @@
 import Link from 'next/link';
 import { motion, AnimatePresence } from 'framer-motion';
 import { useState, useEffect } from 'react';
-import { Menu, X, Home, User, Briefcase, Mail, Palette, Wrench } from 'lucide-react';
+import { Menu, X, Home, User, Briefcase, Mail, Palette } from 'lucide-react';
 import { usePathname } from 'next/navigation';
 import Logo from '@/components/ui/Logo';
-
-const navLinks = [
-  { name: 'Home', href: '/', icon: Home },
-  { name: 'About', href: '/about', icon: User },
-  { name: 'Projects', href: '/projects', icon: Briefcase },
-  { name: 'Design & Fab', href: '/design-fabrication', icon: Palette },
-  { name: 'Contact', href: '/contact', icon: Mail },
-];
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const pathname = usePathname();
+  const showDesignSection = process.env.NEXT_PUBLIC_SHOW_DESIGN_SECTION === 'true';
+
+  const baseNavLinks = [
+    { name: 'Home', href: '/', icon: Home },
+    { name: 'About', href: '/about', icon: User },
+    { name: 'Projects', href: '/projects', icon: Briefcase },
+    { name: 'Contact', href: '/contact', icon: Mail },
+  ];
+
+  const designNavLink = { name: 'Design & Fab', href: '/design-fabrication', icon: Palette };
+
+  const navLinks = showDesignSection ? [...baseNavLinks.slice(0, 3), designNavLink, ...baseNavLinks.slice(3)] : baseNavLinks;
 
   useEffect(() => {
     const handleScroll = () => {

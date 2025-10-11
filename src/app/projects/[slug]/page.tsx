@@ -1,9 +1,10 @@
 'use client';
 
-import { motion, AnimatePresence } from 'framer-motion';
-import { useEffect, useState } from 'react';
-import { notFound } from 'next/navigation';
+import { motion } from 'framer-motion';
+import { useEffect } from 'react';
+import { notFound, useParams } from 'next/navigation';
 import Link from 'next/link';
+import Image from 'next/image';
 import { 
   ArrowLeft, 
   ExternalLink, 
@@ -14,15 +15,10 @@ import {
 } from 'lucide-react';
 import { projects, GalleryItem } from '@/content/projects';
 
-interface ProjectDetailPageProps {
-  params: Promise<{
-    slug: string;
-  }>;
-}
-
-const ProjectDetailPage = async ({ params }: ProjectDetailPageProps) => {
-  const resolvedParams = await params;
-  const project = projects.find(p => p.slug === resolvedParams.slug);
+const ProjectDetailPage = () => {
+  const params = useParams();
+  const slug = params.slug as string;
+  const project = projects.find(p => p.slug === slug);
 
   useEffect(() => {
     if (project) {
@@ -192,9 +188,11 @@ const ProjectDetailPage = async ({ params }: ProjectDetailPageProps) => {
                         </div>
                       ) : (
                         <div className="aspect-video">
-                          <img
+                          <Image
                             src={item.url}
                             alt={item.caption}
+                            width={800}
+                            height={450}
                             className="w-full h-full object-cover"
                           />
                         </div>
@@ -214,9 +212,11 @@ const ProjectDetailPage = async ({ params }: ProjectDetailPageProps) => {
           {!isGalleryProject && (
             <motion.div variants={itemVariants} className="glass-card p-8">
               <div className="aspect-video rounded-lg overflow-hidden">
-                <img
+                <Image
                   src={project.image}
                   alt={project.title}
+                  width={800}
+                  height={450}
                   className="w-full h-full object-cover"
                 />
               </div>

@@ -21,7 +21,7 @@ export async function POST(request: Request) {
     }
 
   const resend = new Resend(process.env.RESEND_API_KEY as string);
-  const { data, error } = await resend.emails.send({
+  const { error } = await resend.emails.send({
       from: 'Portfolio Contact Form <onboarding@resend.dev>', // This must be a verified domain on Resend.
       to: toEmail,
   subject: `New message from ${name}: ${subject}`,

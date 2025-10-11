@@ -2,15 +2,17 @@
 
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import Link from 'next/link';
 import { Filter } from 'lucide-react';
 import { projects, categories } from '@/content/projects';
 import ProjectCard from '@/components/shared/ProjectCard';
 
-type Project = typeof projects[0];
-
 const ProjectsPage = () => {
   const [selectedCategory, setSelectedCategory] = useState('all');
+  const showDesignSection = process.env.NEXT_PUBLIC_SHOW_DESIGN_SECTION === 'true';
+
+  // Filter out design/fabrication projects if the flag is false
+  const availableProjects = showDesignSection ? projects : projects.filter(project => project.category === 'Development');
+  const availableCategories = showDesignSection ? categories : categories.filter(cat => cat.value === 'all' || cat.value === 'Development');
 
   useEffect(() => {
     document.title = 'Projects by Daniel Awuni | Full-Stack Development & Design Portfolio';
@@ -27,8 +29,8 @@ const ProjectsPage = () => {
   }, []);
 
   const filteredProjects = selectedCategory === 'all' 
-    ? projects 
-    : projects.filter(project => project.category === selectedCategory);
+    ? availableProjects 
+    : availableProjects.filter(project => project.category === selectedCategory);
 
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -37,14 +39,6 @@ const ProjectsPage = () => {
       transition: {
         staggerChildren: 0.1,
       },
-    },
-  };
-
-  const cardVariants = {
-    hidden: { opacity: 0, y: 20 },
-    visible: {
-      opacity: 1,
-      y: 0,
     },
   };
 
@@ -74,7 +68,7 @@ const ProjectsPage = () => {
           transition={{ duration: 0.6, delay: 0.2 }}
           className="flex flex-wrap justify-center gap-2 mb-12"
         >
-          {categories.map((category) => (
+          {availableCategories.map((category) => (
             <button
               key={category.value}
               onClick={() => setSelectedCategory(category.value)}

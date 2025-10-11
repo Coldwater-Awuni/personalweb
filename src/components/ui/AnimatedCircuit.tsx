@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect, useRef, useState } from "react";
+import React, { useEffect, useRef } from "react";
 import gsap from "gsap";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 
@@ -10,7 +10,7 @@ gsap.registerPlugin(MotionPathPlugin);
 const createRandomPulseEffects = (svg: SVGSVGElement, paths: NodeListOf<SVGPathElement>) => {
   const pulseTimeline = gsap.timeline();
   
-  paths.forEach((path, index) => {
+  paths.forEach((path) => {
     // Create random pulse points along each path
     const numPulses = Math.floor(Math.random() * 3) + 1; // 1-3 pulses per path
     
@@ -97,7 +97,6 @@ interface AnimatedMapProps {
 
 const AnimatedCircuit: React.FC<AnimatedMapProps> = ({ className }) => {
   const svgRef = useRef<SVGSVGElement | null>(null);
-  const [showBackground, setShowBackground] = useState(false);
 
   useEffect(() => {
     // Non-null assertion because svgRef is guaranteed to be set
@@ -169,7 +168,6 @@ const AnimatedCircuit: React.FC<AnimatedMapProps> = ({ className }) => {
         },
         "-=1.5"
       )
-      .call(() => setShowBackground(true), [], "+=0.2") // show background before flow
       .call(initializeLightingEffects, [], "+=0.3") // start lighting effects
       .call(runLoopedFlow, [], "+=0.5"); // start flow
 

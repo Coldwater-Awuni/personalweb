@@ -2,6 +2,7 @@
 
 import { motion } from 'framer-motion';
 import { useEffect } from 'react';
+import Image from 'next/image';
 import { 
   User, 
   Briefcase, 
@@ -275,9 +276,11 @@ const AboutPage = () => {
         >
           {/* Mobile Background SVG */}
           <div className="lg:hidden sticky top-40 pointer-events-none h-screen flex items-center justify-center">
-            <img
+            <Image
               src="/Daniei_standing.svg"
               alt=""
+              width={400}
+              height={600}
               className="w-full max-w-sm h-auto object-contain opacity-30"
               aria-hidden="true"
             />
@@ -297,9 +300,11 @@ const AboutPage = () => {
               className="hidden lg:block lg:sticky lg:top-20"
             >
               <div className="glass-card p-8 text-center">
-                <img
+                <Image
                   src="/Daniei_standing.svg"
                   alt="Daniel Standing"
+                  width={400}
+                  height={600}
                   className="w-full max-w-sm mx-auto h-auto"
                 />
                 <p className="text-white/60 mt-4 text-sm">

@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import { motion, AnimatePresence, PanInfo } from 'framer-motion';
+import Image from 'next/image';
 import { ChevronLeft, ChevronRight, Play, Pause } from 'lucide-react';
 import { GalleryItem } from '@/content/projects';
 
@@ -149,10 +150,11 @@ const ProjectSlider = ({
             className="absolute inset-0 cursor-grab active:cursor-grabbing"
           >
             {currentItem.type === 'image' ? (
-              <img
+              <Image
                 src={currentItem.url}
                 alt={currentItem.caption}
-                className="w-full h-full object-cover"
+                fill
+                className="object-cover"
                 draggable={false}
               />
             ) : (
@@ -289,10 +291,11 @@ const ProjectSlider = ({
                 whileHover={{ scale: index === currentIndex ? 1.1 : 1.05 }}
                 whileTap={{ scale: 0.95 }}
               >
-                <img
+                <Image
                   src={item.type === 'video' ? item.thumbnail || item.url : item.url}
                   alt={item.caption}
-                  className="w-full h-full object-cover"
+                  fill
+                  className="object-cover"
                 />
               </motion.button>
             ))}

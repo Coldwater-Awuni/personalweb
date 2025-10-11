@@ -1,4 +1,4 @@
-'use client';
+﻿'use client';
 
 import { motion } from 'framer-motion';
 import {
@@ -10,14 +10,21 @@ import {
 
 type SkillBadge = { icon: React.ComponentType<{ className?: string }>; label: string; color: string };
 
-const skills: SkillBadge[] = [
-  { icon: Code2, label: 'Full-Stack & Flutter', color: 'from-blue-500 to-cyan-500' },
-  { icon: Palette, label: 'Design & Visualization', color: 'from-purple-500 to-pink-500' },
-  { icon: Settings, label: 'CNC & Fabrication', color: 'from-orange-500 to-red-500' },
-  { icon: Cpu, label: 'Systems & AI Workflows', color: 'from-green-500 to-emerald-500' },
-];
-
 const SkillsGrid = () => {
+  const showDesignSection = process.env.NEXT_PUBLIC_SHOW_DESIGN_SECTION === 'true';
+
+  const allSkills: SkillBadge[] = [
+    { icon: Code2, label: 'Software Developer || Full-Stack ', color: 'from-blue-500 to-cyan-500' },
+    { icon: Palette, label: 'Design & Visualization', color: 'from-purple-500 to-pink-500' },
+    { icon: Settings, label: 'CNC & Fabrication', color: 'from-orange-500 to-red-500' },
+    { icon: Cpu, label: 'Systems & AI Workflows', color: 'from-green-500 to-emerald-500' },
+  ];
+
+  // Filter out design/fabrication skills if SHOW_DESIGN_SECTION is false
+  const skills = showDesignSection
+    ? allSkills
+    : allSkills.filter(skill => !['Design & Visualization', 'CNC & Fabrication'].includes(skill.label));
+
   const skillVariants = {
     hidden: { opacity: 0, scale: 0.8 },
     visible: {

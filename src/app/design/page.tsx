@@ -113,7 +113,7 @@ const DesignProjectsPage = () => {
           className="space-y-12"
         >
           <AnimatePresence mode="wait">
-            {designProjects.map((project, index) => (
+            {designProjects.map((project) => (
               <motion.div
                 key={project.id}
                 variants={cardVariants}

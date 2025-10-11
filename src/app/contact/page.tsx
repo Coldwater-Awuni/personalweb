@@ -48,10 +48,9 @@ const ContactPage = () => {
         setStatus('success');
         (e.target as HTMLFormElement).reset();
       } else {
-        const data = await response.json();
         setStatus('error');
       }
-    } catch (error) {
+    } catch {
       setStatus('error');
     } finally {
       setIsLoading(false);
@@ -174,7 +173,7 @@ const ContactPage = () => {
               </h2>
               
               <div className="space-y-6">
-                {contactInfo.map((info, index) => (
+                {contactInfo.map((info) => (
                   <motion.div
                     key={info.label}
                     variants={itemVariants}

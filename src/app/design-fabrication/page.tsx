@@ -3,7 +3,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Calendar, Clock, User, Tag, ExternalLink, Github, Palette, Wrench } from 'lucide-react';
-import { designFabricationProjects, designFabricationCategories, type DesignFabricationProject } from '@/content/design-fabrication';
+import { designFabricationProjects, designFabricationCategories } from '@/content/design-fabrication';
 import ProjectSlider from '@/components/ui/ProjectSlider';
 import MediaGallery from '@/components/ui/MediaGallery';
 
@@ -11,9 +11,10 @@ type ViewMode = 'slider' | 'gallery';
 type ProjectCategory = 'Design' | 'Fabrication' | 'all';
 
 const DesignFabricationPage = () => {
+  const showDesignSection = process.env.NEXT_PUBLIC_SHOW_DESIGN_SECTION === 'true';
+
   const [selectedCategory, setSelectedCategory] = useState<ProjectCategory>('all');
   const [viewMode, setViewMode] = useState<ViewMode>('slider');
-  const [selectedProject, setSelectedProject] = useState<number | null>(null);
 
   useEffect(() => {
     document.title = 'Design & Fabrication Projects | Daniel Awuni Portfolio';
@@ -22,6 +23,18 @@ const DesignFabricationPage = () => {
       metaDescription.setAttribute('content', 'Explore Daniel Awuni\'s design and fabrication projects featuring digital art, CNC machining, exhibition work, and custom manufacturing solutions.');
     }
   }, []);
+
+  // If design section is disabled, show 404 or redirect
+  if (!showDesignSection) {
+    return (
+      <div className="min-h-screen flex items-center justify-center">
+        <div className="text-center">
+          <h1 className="text-4xl font-bold text-white mb-4">404 - Page Not Found</h1>
+          <p className="text-white/70">The design and fabrication section is currently unavailable.</p>
+        </div>
+      </div>
+    );
+  }
 
   // Filter projects for design and fabrication only
   const filteredProjects = selectedCategory === 'all' 
@@ -144,7 +157,7 @@ const DesignFabricationPage = () => {
           className="space-y-12"
         >
           <AnimatePresence mode="wait">
-            {filteredProjects.map((project, index) => (
+            {filteredProjects.map((project) => (
               <motion.div
                 key={project.id}
                 variants={cardVariants}

@@ -2,6 +2,7 @@
 
 import { useState, useEffect, useCallback } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
+import Image from 'next/image';
 import { X, ChevronLeft, ChevronRight, Play, Pause, Volume2, VolumeX } from 'lucide-react';
 import { GalleryItem } from '@/content/projects';
 
@@ -122,10 +123,11 @@ const Lightbox = ({ items, currentIndex, isOpen, onClose, onNext, onPrevious }: 
           onClick={(e) => e.stopPropagation()}
         >
           {currentItem.type === 'image' ? (
-            <img
+            <Image
               src={currentItem.url}
               alt={currentItem.caption}
-              className="w-full h-full object-contain rounded-xl"
+              fill
+              className="object-contain rounded-xl"
               draggable={false}
             />
           ) : (
@@ -217,18 +219,20 @@ const MediaGallery = ({ items, className = '' }: MediaGalleryProps) => {
             {/* Thumbnail */}
             <div className="relative aspect-video overflow-hidden">
               {item.type === 'image' ? (
-                <img
+                <Image
                   src={item.url}
                   alt={item.caption}
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                  fill
+                  className="object-cover transition-transform duration-500 group-hover:scale-110"
                   loading="lazy"
                 />
               ) : (
                 <>
-                  <img
+                  <Image
                     src={item.thumbnail || item.url}
                     alt={item.caption}
-                    className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-110"
                     loading="lazy"
                   />
                   <div className="absolute inset-0 flex items-center justify-center bg-black/30 group-hover:bg-black/20 transition-colors">

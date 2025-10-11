@@ -1,6 +1,7 @@
 "use client";
 import { motion } from 'framer-motion';
 import Link from 'next/link';
+import Image from 'next/image';
 import { ExternalLink, Github, User, Clock, ChevronRight } from 'lucide-react';
 import { Project } from '@/content/projects';
 
@@ -31,9 +32,11 @@ export default function ProjectCard({
         {isFeatured ? (
           // Featured variant: Use actual project image
           <div className="aspect-video">
-            <img
+            <Image
               src={project.image}
               alt={project.title}
+              width={400}
+              height={225}
               className="w-full h-full object-cover"
             />
           </div>
