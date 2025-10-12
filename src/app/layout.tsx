@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import AnimatedCircuit from "@/components/ui/AnimatedCircuit";
+import CustomCursor from "@/components/ui/CustomCursor";
 import { structuredData } from "@/lib/structured-data";
 
 const geistSans = Geist({
@@ -141,6 +142,7 @@ export default function RootLayout({
           <Header />
           <main className="flex-grow pt-20 relative z-10">{children}</main>
           <Footer />
+          <CustomCursor />
         </div>
       </body>
     </html>

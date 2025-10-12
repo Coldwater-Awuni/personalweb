@@ -63,10 +63,11 @@ export const experience = [
     company: "Remote & On-site",
     description: "Delivering cross-platform apps, responsive websites, e-commerce platforms, and precision fabrication projects while integrating AI to streamline design & development.",
     achievements: [
-      "Built & deployed multi-platform apps (Flutter/React)",
+      "Built & deployed full-stack apps using Flutter, React.js, Next.js, and Node.js",
+      "Developed secure authentication and payment systems",
+      "Integrated REST APIs and TypeScript for scalable backends",
+      "Applied AI tools to streamline full-stack workflows",
       "Delivered signage, prototypes & custom CNC/laser projects",
-      "Integrated secure auth & payments in client sites",
-      "Applied AI tools to accelerate design + optimization"
     ]
   },
   {

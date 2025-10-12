@@ -122,7 +122,7 @@ const Hero = () => {
           >
             <div className="relative w-full max-w-2xl xl:max-w-4xl">
               <motion.img
-                src="/daniel.svg"
+                src="/Daniel.svg"
                 alt="Daniel Awuni"
                 className="w-full h-auto max-h-[80vh] object-contain"
                 whileHover={{ scale: 1.05 }}

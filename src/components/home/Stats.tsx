@@ -21,11 +21,11 @@ const Stats = () => {
         transition={{ duration: 0.8 }}
       >
         <div className="text-center">
-          <div className="text-2xl md:text-3xl lg:text-4xl font-bold gradient-text mb-2">{developmentProjects.length}</div>
+          <div className="text-2xl md:text-3xl lg:text-4xl font-bold gradient-text mb-2">10 +</div>
           <div className="text-white/70 text-sm lg:text-base">Development Projects</div>
         </div>
         <div className="text-center">
-          <div className="text-2xl md:text-3xl lg:text-4xl font-bold gradient-text mb-2">{designProjects.length}</div>
+          <div className="text-2xl md:text-3xl lg:text-4xl font-bold gradient-text mb-2">{designProjects.length} +</div>
           <div className="text-white/70 text-sm lg:text-base">Design Projects</div>
         </div>
         <div className="text-center">
@@ -49,8 +49,8 @@ const Stats = () => {
       transition={{ duration: 0.8 }}
     >
       <div className="text-center">
-        <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">{developmentProjects.length}</div>
-        <div className="text-white/70">Development Projects</div>
+        <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">10 +</div>
+        <div className="text-white/70">Projects Delivered</div>
       </div>
       <div className="text-center">
         <div className="text-3xl md:text-4xl font-bold gradient-text mb-2">4+</div>

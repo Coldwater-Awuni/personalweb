@@ -35,11 +35,11 @@ export default function Home() {
   return (
     <div>
       <Hero />
-      <section className="py-20">
+      {/* <section className="py-20">
         <div className="container mx-auto px-6">
           <SkillsGrid />
         </div>
-      </section>
+      </section> */}
       <section className="py-20">
         <div className="container mx-auto px-6">
           <Stats />

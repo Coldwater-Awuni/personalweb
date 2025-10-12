@@ -2,7 +2,7 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import Image from 'next/image';
-import { ExternalLink, Github, User, Clock, ChevronRight } from 'lucide-react';
+import { ExternalLink, Github, User, Clock, ChevronRight, Lock } from 'lucide-react';
 import { Project } from '@/content/projects';
 
 interface ProjectCardProps {
@@ -29,23 +29,15 @@ export default function ProjectCard({
     >
       {/* Project Image */}
       <div className="relative overflow-hidden rounded-t-2xl">
-        {isFeatured ? (
-          // Featured variant: Use actual project image
-          <div className="aspect-video">
-            <Image
-              src={project.image}
-              alt={project.title}
-              width={400}
-              height={225}
-              className="w-full h-full object-cover"
-            />
-          </div>
-        ) : (
-          // Default variant: Use gradient placeholder
-          <div className="aspect-video bg-gradient-to-br from-purple-500/20 to-blue-500/20 flex items-center justify-center">
-            <span className="text-white/60 text-sm">{project.category} Project</span>
-          </div>
-        )}
+        <div className="aspect-video">
+          <Image
+            src={project.image}
+            alt={project.title}
+            width={400}
+            height={225}
+            className="w-full h-full object-cover"
+          />
+        </div>
 
         {/* Overlay */}
         <div className="absolute inset-0 bg-black/50 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
@@ -77,6 +69,14 @@ export default function ProjectCard({
         {showFeaturedBadge && project.featured && (
           <div className="absolute top-4 left-4 px-3 py-1 bg-gradient-to-r from-yellow-400 to-orange-500 text-black text-xs font-semibold rounded-full">
             Featured
+          </div>
+        )}
+
+        {/* Private Badge */}
+        {project.isPrivate && (
+          <div className="absolute top-4 right-4 px-3 py-1 bg-gradient-to-r from-gray-600 to-gray-700 text-white text-xs font-semibold rounded-full flex items-center gap-1">
+            <Lock size={12} />
+            Private
           </div>
         )}
       </div>

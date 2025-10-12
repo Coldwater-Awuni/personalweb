@@ -61,15 +61,15 @@ const ContactPage = () => {
     {
       icon: Mail,
       label: 'Email',
-      value: 'hello@portfolio.dev',
-      href: 'mailto:hello@portfolio.dev',
+      value: 'danielawuni53@gmail.com',
+      href: 'mailto:danielawuni53@gmail.com',
       color: 'from-blue-500 to-cyan-500'
     },
     {
       icon: Phone,
       label: 'Phone',
-      value: '+1 (555) 123-4567',
-      href: 'tel:+15551234567',
+      value: '+233 542 077 533',
+      href: 'tel:+233542077533',
       color: 'from-green-500 to-emerald-500'
     },
     {

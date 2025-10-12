@@ -98,10 +98,8 @@ const Footer = () => {
           {/* Bottom Section */}
           <div className="border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
             <div className="text-white/60 text-center md:text-left">
-              <p>&copy; {new Date().getFullYear()} Portfolio. All rights reserved.</p>
-              <p className="text-sm flex items-center gap-1 justify-center md:justify-start mt-1">
-                Built with <Heart size={14} className="text-red-400" /> using Next.js & Tailwind CSS
-              </p>
+              <p>&copy; {new Date().getFullYear()} Daniel Awuni. All rights reserved.</p>
+              
             </div>
 
             {/* Back to Top */}

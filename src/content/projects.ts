@@ -33,6 +33,7 @@ export interface Project {
   challenges: string[];
   results: string[];
   gallery: GalleryItem[]; // Gallery items with images and videos
+  isPrivate?: boolean; // Indicates projects without public URLs (API, dashboard, internal tools)
 }
 
 export const projects: Project[] = [
@@ -143,9 +144,9 @@ export const projects: Project[] = [
     demoUrl: "https://brickandmortardecorgh.com",
     githubUrl: null,
     featured: true,
-    year: "2024",
+    year: "2025",
     client: "Brick & Mortar Decor",
-    duration: "12 weeks",
+    duration: "8 weeks",
     technologies: [
       { name: "React 18", category: "Framework" },
       { name: "Vite", category: "Build" },
@@ -270,6 +271,7 @@ export const projects: Project[] = [
     gallery: [
       { type: 'image', url: '/projects/ecom-dashboard.png', caption: 'Project overview' }
     ],
+    isPrivate: true,
   },
   {
     id: 6,
@@ -277,7 +279,7 @@ export const projects: Project[] = [
     title: "Online Store API Backend",
     description: "Secure, modular Node/Express API with dual storage, payment webhooks, and variant system.",
     longDescription: "Backend powering a modern commerce stack. Implemented flexible product variants (predefined + custom), Paystack payment verification with idempotent order creation, dual storage abstraction (Firebase + Cloudflare R2), Sharp-based image optimization, and comprehensive security middleware (rate limiting, origin allowlisting, structured logging).",
-    image: "/api/placeholder/800/600",
+    image: "/projects/API.webp",
     tags: ["Node.js", "Express", "MongoDB", "Paystack", "Cloudflare R2", "Sharp"],
     category: "Development",
     demoUrl: "#",
@@ -313,8 +315,9 @@ export const projects: Project[] = [
       "Simplified future feature integration"
     ],
     gallery: [
-      { type: 'image', url: '/api/placeholder/600/400', caption: 'Project overview' }
+      { type: 'image', url: '/projects/API.webp"', caption: 'Project overview' }
     ],
+    isPrivate: true,
   }
 ];
 

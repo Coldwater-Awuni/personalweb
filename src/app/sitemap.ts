@@ -2,7 +2,7 @@ import { MetadataRoute } from 'next'
 import { projects } from '@/content/projects'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://danielawuni.dev'
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://awunidevs.vercel.app'
 
   // Static pages
   const staticPages: MetadataRoute.Sitemap = [

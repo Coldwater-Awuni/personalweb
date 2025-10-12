@@ -118,3 +118,8 @@ body {
   border-color: rgba(99, 102, 241, 0.5);
   transform: translateY(-2px);
 }
+
+/* Custom Cursor Styles */
+@media (min-width: 1024px) {
+  /* Default cursor remains visible, only trailing rings are added */
+}

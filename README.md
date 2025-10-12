@@ -49,6 +49,29 @@ cp .env.example .env.local
 
 Update the environment variables in `.env.local` with your actual values:
 
+### 📧 Email Configuration
+
+The contact form uses Google SMTP for sending emails. Follow these steps to set it up:
+
+1. **Enable 2-Factor Authentication** on your Google account
+2. **Generate an App Password** for the portfolio contact form
+3. **Configure environment variables** in `.env.local`:
+   ```bash
+   CONTACT_EMAIL_TO=your-email@gmail.com
+   SMTP_HOST=smtp.gmail.com
+   SMTP_PORT=587
+   SMTP_USER=your-gmail@gmail.com
+   SMTP_PASS=your-16-character-app-password
+   ```
+4. **Test the configuration**:
+   ```bash
+   npm run test:smtp
+   ```
+
+For detailed setup instructions, see [EMAIL_SETUP.md](./EMAIL_SETUP.md).
+
+## Running the Development Server
+
 ```env
 NEXT_PUBLIC_SITE_URL=https://danielawuni.dev
 GOOGLE_SITE_VERIFICATION=your_google_verification_code
