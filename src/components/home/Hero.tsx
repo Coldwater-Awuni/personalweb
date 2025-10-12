@@ -37,7 +37,7 @@ const Hero = () => {
       {/* Daniel SVG Background for Mobile */}
       <div className="absolute inset-0 lg:hidden">
         <motion.img
-          src="/daniel.svg"
+          src="/Daniel.svg"
           alt="Daniel Awuni"
           className="w-full h-full object-cover opacity-10"
           initial={{ scale: 1.1 }}
