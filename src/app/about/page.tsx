@@ -113,7 +113,7 @@ const AboutPage = () => {
                 </div>
                 <div className="flex items-center gap-3 text-white/80">
                   <Award size={18} className="text-purple-400" />
-                  <span>40+ Software & Fabrication Projects</span>
+                  <span>20+ Software & Fabrication Projects</span>
                 </div>
               </div>
             </div>
