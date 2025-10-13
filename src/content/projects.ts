@@ -85,7 +85,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 2,
+    id: 4,
     slug: "bookstore-management-platform",
     title: "Bookstore Management Platform",
     description: "Full-stack bookstore with inventory, orders, AI marketing content, and secure payments.",
@@ -184,7 +184,7 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 4,
+    id: 2,
     slug: "craftd-habitat-portfolio",
     title: "Craft'd Habitat Architectural Portfolio",
     description: "Performance-optimized static portfolio with custom lazy loading and luxury design system.",
