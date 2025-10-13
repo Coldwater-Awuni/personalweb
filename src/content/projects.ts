@@ -85,51 +85,47 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 4,
-    slug: "bookstore-management-platform",
-    title: "Bookstore Management Platform",
-    description: "Full-stack bookstore with inventory, orders, AI marketing content, and secure payments.",
-    longDescription: "A comprehensive e-commerce system supporting physical & digital book sales. Built an admin dashboard for inventory CRUD, order lifecycle, and customer insights. Integrated Paystack for payments, Firebase for auth + real-time Firestore updates, and Gemini AI (via Genkit) for automated promotional banner content. Emphasis on modular architecture, type safety, and operational efficiency.",
-      image: "/projects/store.png",
-      tags: ["Next.js", "Firebase", "Paystack", "AI", "TypeScript", "Zod"],
+    id: 2,
+    slug: "craftd-habitat-portfolio",
+    title: "Craft'd Habitat Architectural Portfolio",
+    description: "Performance-optimized static portfolio with custom lazy loading and luxury design system.",
+    longDescription: "Architectural showcase site combining aesthetic precision with engineering performance. Built custom IntersectionObserver-based lazy loading for images/videos, modular CSS variable system, hierarchical navigation, and dual Firestore + EmailJS contact capture. Delivered an immersive browsing experience for project case studies.",
+    image: "/projects/craftdhabitat.png",
+    tags: ["HTML5", "CSS3", "JavaScript", "Firebase", "Lazy Loading", "UI Architecture"],
     category: "Development",
-    demoUrl: "https://shop.sub-saharaninvestmentlinkgroup.co.za/store",
+    demoUrl: "https://craftdhabitat.com",
     githubUrl: null,
     featured: true,
-    year: "2025",
-    client: "SubSaharan Investment Link Group",
+    year: "2024",
+    client: "Craft'd Habitat",
     duration: "6 weeks",
     technologies: [
-      { name: "Next.js 14", category: "Framework" },
-      { name: "TypeScript", category: "Language" },
+      { name: "Vanilla JS (ES6)", category: "Frontend" },
       { name: "Firebase Firestore", category: "Database" },
-      { name: "Firebase Auth", category: "Auth" },
-      { name: "Paystack", category: "Payments" },
-      { name: "Zod", category: "Validation" },
-      { name: "React Email", category: "Email" }
+      { name: "EmailJS", category: "Integration" },
+      { name: "Swiper.js", category: "Carousel" },
+      { name: "CSS Custom Properties", category: "Design System" }
     ],
     features: [
-      "Dual physical/digital product flow",
-      "Role-based admin dashboard",
-      "AI-generated marketing copy",
-      "Automated email receipts",
-      "Multi-currency pricing support",
-      "Real-time inventory syncing"
+      "Custom media lazy loading system",
+      "Responsive luxury typography scale",
+      "Expandable content modules",
+      "Firestore-backed contact capture",
+      "Email notification workflow",
+      "Touch-optimized navigation"
     ],
     challenges: [
-      "Coordinating asynchronous order/payment states",
-      "Securing digital file delivery",
-      "Balancing AI content with brand tone"
+      "Performance under heavy media load",
+      "Consistent luxury brand feel across pages",
+      "Progressive enhancement without build step"
     ],
     results: [
-      "Reduced manual promo writing time",
-      "Enhanced operational clarity",
-      "Scalable catalog architecture"
+      "Reduced initial media payload",
+      "Improved time-to-interactive",
+      "Streamlined lead capture process"
     ],
     gallery: [
-      { type: 'image', url: '/projects/store.png', caption: 'Project overview' },
-      { type: 'image', url: '/projects/store1.png', caption: 'Checkout flow' },
-      { type: 'image', url: '/projects/store2.png', caption: 'Dashboard' }
+      { type: 'image', url: '/projects/craftdhabitat.png', caption: 'Home Page' }
     ],
   },
   {
@@ -184,49 +180,54 @@ export const projects: Project[] = [
     ],
   },
   {
-    id: 2,
-    slug: "craftd-habitat-portfolio",
-    title: "Craft'd Habitat Architectural Portfolio",
-    description: "Performance-optimized static portfolio with custom lazy loading and luxury design system.",
-    longDescription: "Architectural showcase site combining aesthetic precision with engineering performance. Built custom IntersectionObserver-based lazy loading for images/videos, modular CSS variable system, hierarchical navigation, and dual Firestore + EmailJS contact capture. Delivered an immersive browsing experience for project case studies.",
-    image: "/projects/craftdhabitat.png",
-    tags: ["HTML5", "CSS3", "JavaScript", "Firebase", "Lazy Loading", "UI Architecture"],
+    id: 4,
+    slug: "bookstore-management-platform",
+    title: "Bookstore Management Platform",
+    description: "Full-stack bookstore with inventory, orders, AI marketing content, and secure payments.",
+    longDescription: "A comprehensive e-commerce system supporting physical & digital book sales. Built an admin dashboard for inventory CRUD, order lifecycle, and customer insights. Integrated Paystack for payments, Firebase for auth + real-time Firestore updates, and Gemini AI (via Genkit) for automated promotional banner content. Emphasis on modular architecture, type safety, and operational efficiency.",
+      image: "/projects/store.png",
+      tags: ["Next.js", "Firebase", "Paystack", "AI", "TypeScript", "Zod"],
     category: "Development",
-    demoUrl: "https://craftdhabitat.com",
+    demoUrl: "https://shop.sub-saharaninvestmentlinkgroup.co.za/store",
     githubUrl: null,
     featured: true,
-    year: "2024",
-    client: "Craft'd Habitat",
+    year: "2025",
+    client: "SubSaharan Investment Link Group",
     duration: "6 weeks",
     technologies: [
-      { name: "Vanilla JS (ES6)", category: "Frontend" },
+      { name: "Next.js 14", category: "Framework" },
+      { name: "TypeScript", category: "Language" },
       { name: "Firebase Firestore", category: "Database" },
-      { name: "EmailJS", category: "Integration" },
-      { name: "Swiper.js", category: "Carousel" },
-      { name: "CSS Custom Properties", category: "Design System" }
+      { name: "Firebase Auth", category: "Auth" },
+      { name: "Paystack", category: "Payments" },
+      { name: "Zod", category: "Validation" },
+      { name: "React Email", category: "Email" }
     ],
     features: [
-      "Custom media lazy loading system",
-      "Responsive luxury typography scale",
-      "Expandable content modules",
-      "Firestore-backed contact capture",
-      "Email notification workflow",
-      "Touch-optimized navigation"
+      "Dual physical/digital product flow",
+      "Role-based admin dashboard",
+      "AI-generated marketing copy",
+      "Automated email receipts",
+      "Multi-currency pricing support",
+      "Real-time inventory syncing"
     ],
     challenges: [
-      "Performance under heavy media load",
-      "Consistent luxury brand feel across pages",
-      "Progressive enhancement without build step"
+      "Coordinating asynchronous order/payment states",
+      "Securing digital file delivery",
+      "Balancing AI content with brand tone"
     ],
     results: [
-      "Reduced initial media payload",
-      "Improved time-to-interactive",
-      "Streamlined lead capture process"
+      "Reduced manual promo writing time",
+      "Enhanced operational clarity",
+      "Scalable catalog architecture"
     ],
     gallery: [
-      { type: 'image', url: '/projects/craftdhabitat.png', caption: 'Home Page' }
+      { type: 'image', url: '/projects/store.png', caption: 'Project overview' },
+      { type: 'image', url: '/projects/store1.png', caption: 'Checkout flow' },
+      { type: 'image', url: '/projects/store2.png', caption: 'Dashboard' }
     ],
   },
+  
   {
     id: 5,
     slug: "ecommerce-admin-dashboard",
