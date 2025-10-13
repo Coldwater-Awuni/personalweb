@@ -96,7 +96,7 @@ export const projects: Project[] = [
     demoUrl: "https://shop.sub-saharaninvestmentlinkgroup.co.za/store",
     githubUrl: null,
     featured: true,
-    year: "2024",
+    year: "2025",
     client: "SubSaharan Investment Link Group",
     duration: "6 weeks",
     technologies: [
@@ -287,7 +287,7 @@ export const projects: Project[] = [
     featured: false,
     year: "2024",
     client: "Platform Infrastructure",
-    duration: "7 weeks",
+    duration: "9 weeks",
     technologies: [
       { name: "Node.js", category: "Runtime" },
       { name: "Express.js", category: "Framework" },
