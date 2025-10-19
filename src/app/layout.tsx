@@ -51,7 +51,7 @@ export const metadata: Metadata = {
     address: false,
     telephone: false,
   },
-  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://danielawuni.dev'),
+  metadataBase: new URL(process.env.NEXT_PUBLIC_SITE_URL || 'https://awunidevs.vercel.app/'),
   alternates: {
     canonical: '/',
   },
@@ -64,7 +64,7 @@ export const metadata: Metadata = {
     siteName: "Daniel Awuni Portfolio",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/daniel_img.png",
         width: 1200,
         height: 630,
         alt: "Daniel Awuni - Full-Stack Developer & Digital Designer",
@@ -76,7 +76,7 @@ export const metadata: Metadata = {
     title: "Daniel Awuni | Full-Stack Developer & Digital Designer",
     description: "Full-stack developer specializing in modern web applications, graphic design, digital fabrication, and hardware systems.",
     creator: "@danielawuni", // Update with actual Twitter handle
-    images: ["/og-image.jpg"],
+    images: ["/daniel_img.png"],
   },
   robots: {
     index: true,

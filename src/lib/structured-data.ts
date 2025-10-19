@@ -6,11 +6,11 @@ export const structuredData = {
     "alternateName": "Daniel Awuni",
     "jobTitle": "Full-Stack Developer & Digital Designer",
     "description": "BSc Computer Engineering graduate and full-stack developer specializing in modern web applications, graphic design (vector graphics), digital fabrication, IT systems, and computer hardware.",
-    "url": process.env.NEXT_PUBLIC_SITE_URL || "https://danielawuni.dev",
-    "image": `${process.env.NEXT_PUBLIC_SITE_URL || "https://danielawuni.dev"}/og-image.jpg`,
+    "url": process.env.NEXT_PUBLIC_SITE_URL || "https://awunidevs.vercel.app/",
+    "image": `${process.env.NEXT_PUBLIC_SITE_URL || "https://awunidevs.vercel.app"}/daniel_img.png`,
     "sameAs": [
       "https://github.com/Coldwater-Awuni",
-      "https://linkedin.com/in/daniel-awuni",
+      "www.linkedin.com/in/daniel-awuni-devs",
       "https://twitter.com/danielawuni"
     ],
     "knowsAbout": [
@@ -82,7 +82,7 @@ export const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
     "name": "Daniel Awuni Portfolio",
-    "url": process.env.NEXT_PUBLIC_SITE_URL || "https://danielawuni.dev",
+    "url": process.env.NEXT_PUBLIC_SITE_URL || "https://awunidevs.vercel.app/",
     "description": "Professional portfolio showcasing full-stack development, graphic design, and digital fabrication services by Daniel Awuni.",
     "founder": {
       "@type": "Person",
@@ -97,7 +97,7 @@ export const structuredData = {
     },
     "sameAs": [
       "https://github.com/Coldwater-Awuni",
-      "https://linkedin.com/in/daniel-awuni"
+      "www.linkedin.com/in/daniel-awuni-105ba4191"
     ]
   },
 
@@ -106,7 +106,7 @@ export const structuredData = {
     "@type": "WebSite",
     "name": "Daniel Awuni | Full-Stack Developer & Digital Designer Portfolio",
     "alternateName": "Daniel Awuni Portfolio",
-    "url": process.env.NEXT_PUBLIC_SITE_URL || "https://danielawuni.dev",
+    "url": process.env.NEXT_PUBLIC_SITE_URL || "https://awunidevs.vercel.app/",
     "description": "Professional portfolio of Daniel Awuni, a BSc Computer Engineering graduate and full-stack developer specializing in web applications, graphic design, digital fabrication, and hardware systems.",
     "author": {
       "@type": "Person",
@@ -130,7 +130,7 @@ export const structuredData = {
       "@type": "SearchAction",
       "target": {
         "@type": "EntryPoint",
-        "urlTemplate": `${process.env.NEXT_PUBLIC_SITE_URL || "https://danielawuni.dev"}/projects?search={search_term_string}`
+        "urlTemplate": `${process.env.NEXT_PUBLIC_SITE_URL || "https://awunidevs.vercel.app/"}/projects?search={search_term_string}`
       },
       "query-input": "required name=search_term_string"
     },
@@ -150,25 +150,25 @@ export const structuredData = {
         "@type": "ListItem",
         "position": 1,
         "name": "Home",
-        "item": process.env.NEXT_PUBLIC_SITE_URL || "https://danielawuni.dev"
+        "item": process.env.NEXT_PUBLIC_SITE_URL || "https://awunidevs.vercel.app/"
       },
       {
         "@type": "ListItem",
         "position": 2,
         "name": "About",
-        "item": `${process.env.NEXT_PUBLIC_SITE_URL || "https://danielawuni.dev"}/about`
+        "item": `${process.env.NEXT_PUBLIC_SITE_URL || "https://awunidevs.vercel.app/"}/about`
       },
       {
         "@type": "ListItem",
         "position": 3,
         "name": "Projects",
-        "item": `${process.env.NEXT_PUBLIC_SITE_URL || "https://danielawuni.dev"}/projects`
+        "item": `${process.env.NEXT_PUBLIC_SITE_URL || "https://awunidevs.vercel.app/"}/projects`
       },
       {
         "@type": "ListItem",
         "position": 4,
         "name": "Contact",
-        "item": `${process.env.NEXT_PUBLIC_SITE_URL || "https://danielawuni.dev"}/contact`
+        "item": `${process.env.NEXT_PUBLIC_SITE_URL || "https://awunidevs.vercel.app/"}/contact`
       }
     ]
   }

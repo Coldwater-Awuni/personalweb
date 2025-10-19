@@ -87,10 +87,16 @@ const AboutPage = () => {
             className="lg:col-span-1"
           >
             <div className="glass-card p-8 text-center mb-8">
-              {/* Profile Image Placeholder */}
+              {/* Profile Image */}
               <div className="w-48 h-48 mx-auto mb-6 rounded-full bg-gradient-to-br from-purple-500 to-pink-500 p-1">
-                <div className="w-full h-full rounded-full bg-background flex items-center justify-center">
-                  <User size={80} className="text-white/60" />
+                <div className="w-full h-full rounded-full bg-background overflow-hidden">
+                  <Image
+                    src="/daniel_img.png"
+                    alt="Daniel Awuni"
+                    width={192}
+                    height={192}
+                    className="w-full h-full object-cover z"
+                  />
                 </div>
               </div>
               

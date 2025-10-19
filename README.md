@@ -73,10 +73,10 @@ For detailed setup instructions, see [EMAIL_SETUP.md](./EMAIL_SETUP.md).
 ## Running the Development Server
 
 ```env
-NEXT_PUBLIC_SITE_URL=https://danielawuni.dev
+NEXT_PUBLIC_SITE_URL=https://awunidevs.vercel.app/
 GOOGLE_SITE_VERIFICATION=your_google_verification_code
 NEXT_PUBLIC_TWITTER_HANDLE=@danielawuni
-NEXT_PUBLIC_LINKEDIN_URL=https://linkedin.com/in/daniel-awuni
+NEXT_PUBLIC_LINKEDIN_URL=www.linkedin.com/in/daniel-awuni-105ba4191
 NEXT_PUBLIC_GITHUB_URL=https://github.com/Coldwater-Awuni
 ```
 
