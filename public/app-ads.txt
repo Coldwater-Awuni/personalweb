@@ -1,0 +1,7 @@
+# app-ads.txt file for Portfolio Website
+# This file is used to declare authorized sellers of ad inventory
+# Format: domain.com, publisher-id, DIRECT|RESELLER, TAG-ID
+
+# Add your authorized sellers below
+# Example:
+google.com, pub-5165466280802631, DIRECT, f08c47fec0942fa0
