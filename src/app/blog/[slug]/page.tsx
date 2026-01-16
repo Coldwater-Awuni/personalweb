@@ -2,17 +2,18 @@ import { posts } from '@/content/blog';
 import { notFound } from 'next/navigation';
 
 type PostDetailPageProps = {
-  params: {
+  params: Promise<{
     slug: string;
-  };
+  }>;
 };
 
 export function generateStaticParams() {
   return posts.map(p => ({ slug: p.slug }));
 }
 
-const PostDetailPage = ({ params }: PostDetailPageProps) => {
-  const post = posts.find(p => p.slug === params.slug);
+const PostDetailPage = async ({ params }: PostDetailPageProps) => {
+  const { slug } = await params;
+  const post = posts.find(p => p.slug === slug);
 
   if (!post) {
     notFound();

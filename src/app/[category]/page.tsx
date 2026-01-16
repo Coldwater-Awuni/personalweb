@@ -4,9 +4,9 @@ import { projects } from '@/content/projects';
 import { notFound } from 'next/navigation';
 
 type CategoryPageProps = {
-  params: {
+  params: Promise<{
     category: string;
-  };
+  }>;
 };
 
 export function generateStaticParams() {
@@ -14,8 +14,8 @@ export function generateStaticParams() {
   return [{ category: 'software' }, { category: 'fabrication' }];
 }
 
-const CategoryPage = ({ params }: CategoryPageProps) => {
-  const { category } = params;
+const CategoryPage = async ({ params }: CategoryPageProps) => {
+  const { category } = await params;
 
   if (category !== 'software' && category !== 'fabrication') {
     notFound();
